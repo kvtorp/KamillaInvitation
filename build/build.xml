@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="KamillaInvitation" default="collate" basedir="..">
+	<description>
+		Samle Kamillas invitation
+	</description>
+
+	<property name="build" location="build" />
+	<property name="src" location="src" />
+	<property name="html" location="src/html" />
+	<property name="dist" location="dist" />
+	<property name="usbe" location="e:/" />
+	<property name="usbf" location="f:/" />
+	<property name="usbg" location="g:/" />
+	<property name="usbdir" value="jysk" />
+	<property name="target" value="smartdocs.html" />
+	<property name="footer" value="footer.html" />
+
+	<target name="collate" depends="clean" description="Build file">
+		<concat destfile="${dist}/${target}" encoding="UTF-8">
+			<resourcelist>
+				<file file="${build}/collation.txt">
+				</file>
+			</resourcelist>
+		</concat>
+
+	</target>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="${dist}">
+			</fileset>
+		</delete>
+
+	</target>
+	
+
+</project>
+

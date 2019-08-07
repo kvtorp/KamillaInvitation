@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kamillas fest</title>
+<link rel="stylesheet" type="text/css" href="../css/colours.css">
+
+<style type="text/css">
+html {
+	height: 100%;
+}
+
+body {
+	height: 95%;
+	background-color: #04819E;
+	color: #FF7F00;
+	font-family: Verdana, sans-serif;
+}
+
+section {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+header {
+min-height: 1rem;	
+}
+
+.main-content {
+	position: relative;
+	flex: 1;
+	overflow: auto;
+	color: #04819E;
+	background-color: #FF7F00;
+	border-radius: 1rem;
+}
+
+footer {
+min-height: 1rem;	
+margin-top: 0.5rem;
+}
+
+.main-grid {
+	position: absolute;
+	margin: 1rem;
+	z-index: 10;
+	height: 95%;
+	width: 97%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(4rem, 1fr));
+	grid-gap: 10px;
+}
+
+.kasse {
+	background-color: #04819E;
+	color: #FF7F00;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.animated {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+@keyframes right-left  {
+	0% {
+	right: -50%;
+	transform: scaleX(1);
+	}
+	50% {
+	right: 150%;
+	transform: scaleX(1);
+	}
+	51% {
+	right: 150%;
+	transform: scaleX(-1);
+	}
+	100% {
+	right: -50%;
+	transform: scaleX(-1);
+	}
+
+}
+
+@keyframes rotate {
+	0% {
+	}
+	100% {
+	transform: rotate(1440deg);
+	
+	}
+}
+
+
+.bg-bottom {
+	position: absolute;
+	bottom: 1%;
+}
+
+.right-left-right {
+	animation-name: right-left;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.rotator {
+	animation-name: rotate;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+</style>
+
+<script type="text/javascript" src="../../lib/knockout-3.5.0.js"></script>
+
+</head>
+
+<body class="">
+
+	<section>
+		<header>
+		<h1>Kamilla</h1>
+		</header>
+		<div class="main-content">
+
+<div class="animated">
+<img src="../img/3947369_0.gif" class="bg-bottom right-left-right">
+</div>
+		<div class="main-grid">
+
+		
+		<div class="kasse">
+Hans og Grethe
+<br>
+<strong>Sukkerstænger</strong>
+		</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		<div class="kasse">Kasse</div>
+		
+		</div>
+		
+		</div>
+		<footer>
+		Knapper
+		</footer>
+	</section>
+
+</body>
+
+</html>
